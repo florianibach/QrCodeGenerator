@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using System;
+﻿using System;
 using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
@@ -19,7 +17,7 @@ var qrCode = new SvgQRCode(qrCodeData);
 var svr = await File.ReadAllBytesAsync(@"D:\temp\jer.svg");
 var bitmap = new Bitmap(@"D:\temp\jer_stift.png");
 var svgLogo = new SvgLogo(bitmap, iconSizePercent: 50, fillLogoBackground: false);
-var qrCodeAsImage = qrCode.GetGraphic(20, Color.White, Color.Transparent, drawQuietZones: true, logo: svgLogo);
+var qrCodeAsImage = qrCode.GetGraphic(20, Color.White, Color.Black, drawQuietZones: true, logo: null);
 await WriteToFileAsync(qrCodeAsImage);
 
 Console.WriteLine("finished");
