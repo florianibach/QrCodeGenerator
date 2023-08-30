@@ -1,4 +1,4 @@
 # QrCodeGenerator
 
-##TODOs
+## TODOs
 Input für color + logo auf der Konsole
